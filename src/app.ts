@@ -13,7 +13,8 @@ async function main() {
     mongoUrl: envs.MONGO_ATLAS,
     dbName: envs.MONGO_DB_NAME
   });
-
+ 
+  const port = envs.PORT || 4000
   const server = new Server({
     port: envs.PORT,
     routes: AppRoutes.routes
