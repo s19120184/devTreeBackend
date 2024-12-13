@@ -1,0 +1,6 @@
+.env
+node_modules/
+mongo/
+dist
+package-lock.json
+
