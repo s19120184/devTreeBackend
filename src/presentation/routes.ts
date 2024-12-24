@@ -49,7 +49,7 @@ export class Routes {
 
     router.patch('/user',
       body("handle").notEmpty().withMessage('El handle no puede ir vacio'),
-      body("description").notEmpty().withMessage('La descripción no puede ir vacia'),
+      //body("description").notEmpty().withMessage('La descripción no puede ir vacia'),
       handleInputErrors,
       authenticate,
       UserUseCase.updateUser

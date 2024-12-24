@@ -82,7 +82,8 @@ export class UserUseCase {
         handelExist &&
         handelExist._id.toString() !== req.user._id.toString()
       ) {
-        res.status(409).json("El handle ya esta siendo usado");
+        const error = new Error("El handle ya esta siendo usado");
+        res.status(409).json({error:error.message});
         return;
       }
       req.user.description = description;
